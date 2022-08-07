@@ -1,0 +1,29 @@
+/* Header */
+.header {
+    margin: 2% 4%;
+    border-bottom: solid;
+}
+.nav-main {
+    margin: 4% 0;
+}
+/* Main */
+.main {
+    margin: 2% 6%;
+}
+.title {
+    margin: 2% 0;
+}
+.in_title {
+    margin: 0 2%;
+}
+/* Footer */
+.footer {
+    margin: 2% 4%;
+    border-top: solid;
+}
+.address {
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
