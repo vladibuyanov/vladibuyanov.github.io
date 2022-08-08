@@ -8,7 +8,7 @@
 }
 /* Main */
 .main {
-    margin: 2% 6%;
+    margin: 3% 5%;
 }
 .title {
     margin: 2% 0;
@@ -22,8 +22,27 @@
     border-top: solid;
 }
 .address {
-    margin: 2% 0;
+    margin: 2% 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+}
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+.social-media-img {
+    width: 4%;
+    margin-right: 1%;
+}
+
+
+/* Other */
+a {
+    text-decoration: none;
 }
