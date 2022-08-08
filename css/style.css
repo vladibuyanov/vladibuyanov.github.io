@@ -16,6 +16,18 @@
 .in_title {
     margin: 0 2%;
 }
+.title-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title-link {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+
 /* Footer */
 .footer {
     margin: 2% 4%;
@@ -41,7 +53,7 @@
 .social-media-link {
     margin-right: 20%;
 }
-.social-media-img {
+.img-link {
     width: 30px;
     height: 30px;
 }
