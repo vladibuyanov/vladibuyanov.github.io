@@ -12,7 +12,20 @@
 <body>
 <header class="header">
   <div class="nav-main">
-    <h1>Python Developer</h1>
+    <h1 id="header-title"> Vladislav Buyanov | Python Developer</h1>
+    <div>
+      <!---------------------------------------
+      <select class="header-select" id="lang">
+        <option value="EN">EN</option>
+        <option value="RU">RU</option>
+        <option value="SK">SK</option>
+     </select>
+     ------------------------------------------>
+       <select class="header-select" id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
   </div>
 </header>
 <main class="main">
@@ -54,12 +67,12 @@
     <h2 class="title">Pet projects</h2>
     <div class="in_title">
       <div class="title-head">
-        <h4>Brhlovce Municipal Museum.</h4>
+        <h4>Brhlovce Municipal Museum</h4>
         <a href="http://obecnemuzeumbrhlovce.herokuapp.com/">
           <img src="img/link.png" class="title-link">
         </a>
       </div>
-      <p>Local museum website</p>
+      <p>Local museum website.</p>
       <p>Tech: Django</p>
     </div>
     <div class="in_title">
@@ -92,23 +105,15 @@
 <footer class="footer">
   <div class="address">
     <div class="info">
-      <p>
-        <a href="mailto:vladibuyanov@gmail.com">
-          vladibuyanov@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="tel:+4210908498880">
-          +421(090)849-88-80
-        </a>
-      </p>
+      <p><a href="mailto:vladibuyanov@gmail.com">vladibuyanov@gmail.com</a></p>
+      <p><a href="tel:+4210908498880">+421(090)849-88-80</a></p>
     </div>
     <div class="social-media">
       <a href="https://www.linkedin.com/in/vladibuyanov/" class="social-media-link">
         <img class="img-link" src='img/linkedin.png'>
       </a>
       <a href="https://github.com/vladibuyanov" class="social-media-link">
-        <img class="img-link" src='img/github.png'>
+        <img class="img-link" id="github_link_img" src='img/github.png'>
       </a>
       <a href="https://t.me/Vladislav_Buyanov" class="social-media-link">
         <img class="img-link" src='img/telegram.png'>
@@ -116,5 +121,8 @@
     </div>
   </div>
 </footer>
+<!------------JS------------------->
+<script src="/js/theme.js"></script>
+<!--------------------------------->
 </body>
 </html>

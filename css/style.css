@@ -5,6 +5,12 @@
 }
 .nav-main {
     margin: 4% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-select {
+    border: none;
 }
 /* Main */
 .main {
