@@ -31,7 +31,7 @@
     width: 20px;
     height: 20px;
     margin-left: 10px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 /* Footer */
@@ -68,6 +68,9 @@
 /* Other */
 a {
     text-decoration: none;
+}
+.btn {
+    font-size: x-large;
 }
 button {
     border: none;
