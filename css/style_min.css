@@ -1,0 +1,8 @@
+@media screen and (max-width: 760px) {
+    .nav-main {
+        justify-content: center;
+    }
+    .settings {
+        display: none;
+    }
+}
