@@ -3,14 +3,24 @@
     margin: 2% 4%;
     border-bottom: solid;
 }
+.settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .nav-main {
     margin: 4% 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
+    flex-direction: column;
 }
 .header-select {
     border: none;
+}
+.header-title-div {
+    display: flex;
+    justify-content: center;
 }
 /* Main */
 .main {
