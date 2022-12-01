@@ -12,4 +12,12 @@
     .settings {
         display: none;
     }
+    #langs {width: 20%;}
+    .select {width: 20%;}
+    .header-title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 }
