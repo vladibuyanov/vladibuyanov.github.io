@@ -47,6 +47,15 @@ button {
 }
 
 .header-title {margin-top: 5%;}
+.header-title-text {font-size: 40px;}
+
+#header-social-media {
+    width: 50%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
 
 
 /* Main */
