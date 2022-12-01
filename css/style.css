@@ -1,37 +1,49 @@
+/* Main */
+a {
+    color: black;
+    text-decoration: none;
+}
+.btn {
+    font-size: x-large;
+}
+button {
+    border: none;
+    background-color: white;
+}
+.carousel {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
 /* Header */
 .header {
-    margin: 2% 4%;
-    border-bottom: solid;
+    background-image: url(../img/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
 }
 .settings {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.nav-main {
-    margin: 4% 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-direction: column;
-}
-.header-select {
-    border: none;
-}
 .header-title-div {
+    margin-top: 5%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
+.header-select {border: none;}
+
 /* Main */
-.main {
-    margin: 3% 5%;
-}
-.title {
-    margin: 2% 0;
-}
-.in_title {
-    margin: 0 2%;
-}
+.main {margin: 3% 5%;}
+.title {margin: 2% 0;}
+.in_title {margin: 0 2%;}
 .title-head {
     display: flex;
     flex-direction: row;
@@ -60,7 +72,7 @@
     border-top: solid;
 }
 .address {
-    margin: 2% 1%;
+    margin: 2% 4%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,23 +94,4 @@
 .img-link {
     width: 30px;
     height: 30px;
-}
-/* Other */
-a {
-    text-decoration: none;
-}
-ul {
-
-}
-.btn {
-    font-size: x-large;
-}
-button {
-    border: none;
-    background-color: white;
-}
-.carousel {
-    display: flex;
-    margin-top: 4%;
-    align-items: center;
 }
