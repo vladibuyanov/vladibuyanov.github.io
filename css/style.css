@@ -3,9 +3,7 @@ a {
     color: black;
     text-decoration: none;
 }
-.btn {
-    font-size: x-large;
-}
+.btn {font-size: x-large;}
 button {
     border: none;
     background-color: white;
@@ -27,18 +25,29 @@ button {
     align-items: stretch;
     flex-direction: column;
 }
-.settings {
+
+.header-settings {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.header-title-div {
-    margin-top: 5%;
+#langs {
+    width: 10%;
+    background: rgb(0 0 0 / 13%);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
 }
-.header-select {border: none;}
+.lang {color: white;}
+.select {
+    border: none;
+    width: 10%;
+    text-align: center;
+    background: rgb(0 0 0 / 13%);
+    color: white;
+}
+
+.header-title {margin-top: 5%;}
+
 
 /* Main */
 .main {margin: 3% 5%;}
