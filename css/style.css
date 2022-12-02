@@ -92,9 +92,9 @@ button {
 .address {
     margin: 2% 4%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .info {
     display: flex;
