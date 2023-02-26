@@ -20,38 +20,38 @@
 <header class="header">
     <div class="header-settings">
         <div id="langs">
-            <a class="lang" href="/index.html">EN</a>
-            <a class="lang" href="/ru.html">RU</a>
-            <a class="lang" href="/sk.html">SK</a>
+            <a href="/index.html" class="main-color">EN</a>
+            <a href="/ru.html" class="main-color">RU</a>
+            <a href="/sk.html" class="main-color">SK</a>
         </div>
         <select class="select" id="theme">
             <option value="light">Light</option>
             <option value="dark">Dark</option>
         </select>
     </div>
-    <div class="header-title">
-        <h1 class="header-title-text">Vladislav Buyanov</h1>
+    <div id="header-title" class="main-color">
+        <h1>Vladislav Buyanov</h1>
         <h2>Python Developer</h2>
     </div>
-    <div id="header-social-media">
-        <a href="https://www.linkedin.com/in/vladibuyanov/" class="social-media-link">
-            <img class="img-link" src='img/social-links/link.svg'>
-        </a>
-        <a href="https://github.com/vladibuyanov" class="social-media-link">
-            <img class="img-link" src='img/social-links/tel.svg'>
-        </a>
-        <a href="https://t.me/Vladislav_Buyanov" class="social-media-link">
-            <img class="img-link" src='img/social-links/git.svg'>
-        </a>
-    </div>
-    <div id="documents">
-        <a href="/documents/Python-Developer.docx">Download Resume</a>
+    <div id="header-links">
+        <div id="header-social-media">
+            <a href="https://www.linkedin.com/in/vladibuyanov/" class="social-media-link">
+                <img class="img-link" src='img/social-links/white/link.svg'>
+            </a>
+            <a href="https://github.com/vladibuyanov" class="social-media-link">
+                <img class="img-link" src='img/social-links/white/tel.svg'>
+            </a>
+            <a href="https://t.me/Vladislav_Buyanov" class="social-media-link">
+                <img class="img-link" src='img/social-links/white/git.svg'>
+            </a>
+        </div>
+        <a href="/documents/Python-Developer.docx" id="resume" class="main-color">Download Resume</a>
     </div>
 </header>
 <main class="main">
     <div id="about-me" class="section">
         <div class="title">
-            <img src="img/buttons/about-me.png" alt="">
+            <img src="img/buttons/about-me.png" alt="" class="title-img">
             <h1>About me</h1>
         </div>
         <div class="content">
@@ -77,24 +77,15 @@
             <p>Please feel free to get in touch!</p>
         </div>
     </div>
-    <div id="hobbies" class="section">
-        <div class="title">
-            <img src="img/buttons/hobby.png" alt="">
-            <h1>Hobbies</h1>
-        </div>
-        <div class="content">
-            <p>Playing sports | Reading | Watching TV shows</p>
-        </div>
-    </div>
     <div id="skills" class="section">
         <div class="title">
-            <img src="img/buttons/skills.png" alt="">
+            <img src="img/buttons/skills.png" alt="" class="title-img">
             <h1>My skills</h1>
         </div>
         <div id="skills-content">
             <div class="skill">
                 <div class="skill-title">
-                    <img src="img/buttons/ts.png" alt="">
+                    <img src="img/buttons/ts.png" alt="" class="title-img">
                     <h4 class="title">Technical skills</h4>
                 </div>
                 <ul class="in_title">
@@ -108,7 +99,7 @@
             </div>
             <div id='soft-skill' class="skill">
                 <div class="skill-title">
-                    <img src="img/buttons/ss.png" alt="">
+                    <img src="img/buttons/ss.png" alt="" class="title-img">
                     <h4 class="title">Soft-Skills</h4>
                 </div>
                 <ul class="in_title">
@@ -119,7 +110,7 @@
             </div>
             <div class="skill">
                 <div class="skill-title">
-                    <img src="img/buttons/lang.png" alt="">
+                    <img src="img/buttons/lang.png" alt="" class="title-img">
                     <h4 class="title">Languages</h4>
                 </div>
                 <ul class="in_title">
@@ -132,82 +123,72 @@
     </div>
     <div id="pet-projects">
         <div class="title">
-            <img src="img/buttons/pp.png" alt="">
+            <img src="img/buttons/pp.png" alt="" class="title-img">
             <h1>Pet Projects</h1>
         </div>
-        <div class="content">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="in_title">
-                            <div class="title-head">
-                                <a href="https://web-production-0449.up.railway.app/">
-                                    <h4>Brhlovce Municipal Museum</h4>
-                                </a>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="in_title">
+                        <a href="https://web-production-0449.up.railway.app/" class="second-color">
+                            <h4>Brhlovce Municipal Museum</h4>
+                        </a>
+                        <div class="title-main">
+                            <div>
+                                <h5>Local museum website</h5>
+                                <p>Tech: Python, Django</p>
                             </div>
-                            <div class="title-main">
-                                <div>
-                                    <h5>Local museum website</h5>
-                                    <p>Tech: Python, Django</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="in_title">
-                            <div class="title-head">
-                                <a href="https://web-production-3a3c.up.railway.app/">
-                                    <h4>Small Lib</h4>
-                                </a>
-                            </div>
-                            <div class="title-main">
-                                <div>
-                                    <h5>Web service for exchanging books</h5>
-                                    <p>Tech: Python, Flask, Flask-Sqlalchemy</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="in_title">
-                            <div class="title-head">
-                                <a href="t.me/korona_sk_bot">
-                                    <h4>Korona bot</h4>
-                                </a>
-                            </div>
-                            <h5>A simple telegram bot</h5>
-                            <p>Tech: Telebot</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="in_title">
-                            <div class="title-head">
-                                <h4>Fabrique</h4>
-                            </div>
-                            <h5>Mail management service, API management and statistics</h5>
-                            <p>Tech: Django, Django rest framework</p>
                         </div>
                     </div>
                 </div>
-                <button class='btn' data-bs-target="#carouselExampleControls" data-bs-slide="next">></button>
+                <div class="carousel-item">
+                    <div class="in_title">
+                        <a href="https://web-production-3a3c.up.railway.app/" class="second-color">
+                            <h4>Small Lib</h4>
+                        </a>
+                        <div class="title-main">
+                            <div>
+                                <h5>Web service for exchanging books</h5>
+                                <p>Tech: Python, Flask, Flask-Sqlalchemy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="in_title">
+                        <a href="t.me/korona_sk_bot" class="second-color">
+                            <h4>Korona bot</h4>
+                        </a>
+                        <h5>A simple telegram bot</h5>
+                        <p>Tech: Telebot</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="in_title">
+                        <h4 class="second-color">Fabrique</h4>
+                        <h5>Mail management service, API management and statistics</h5>
+                        <p>Tech: Django, Django rest framework</p>
+                    </div>
+                </div>
             </div>
+            <button class='btn' data-bs-target="#carouselExampleControls" data-bs-slide="next">></button>
         </div>
     </div>
 </main>
 <footer class="footer">
     <div class="address">
-        <p><a href="mailto:vladibuyanov@gmail.com">vladibuyanov@gmail.com</a></p>
-        <p><a href="tel:+4210908498880">+421(908)498-880</a></p>
+        <a href="mailto:vladibuyanov@gmail.com" class="second-color">vladibuyanov@gmail.com</a>
+        <a href="tel:+4210908498880" class="second-color">+421(908)498-880</a>
     </div>
     <div id="social-media">
         <a href="https://www.linkedin.com/in/vladibuyanov/">
-            <img class="img-link" src='img/social-links/link.svg'>
+            <img class="img-link footer-img" src='img/social-links/link.svg'>
         </a>
         <a href="https://github.com/vladibuyanov">
-            <img class="img-link" src='img/social-links/tel.svg'>
+            <img class="img-link footer-img" src='img/social-links/tel.svg'>
         </a>
         <a href="https://t.me/Vladislav_Buyanov">
-            <img class="img-link" src='img/social-links/git.svg'>
+            <img class="img-link footer-img" src='img/social-links/git.svg'>
         </a>
     </div>
 </footer>
