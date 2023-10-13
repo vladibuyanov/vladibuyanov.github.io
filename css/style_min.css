@@ -5,7 +5,7 @@
    .social-media-link {margin-right: 0;}
    #resume {width: 100%;}
 
-   #skills-content {flex-direction: column;}
+   #skills-content {grid-template-columns: 1fr;}
    .skill {padding: 5%; width: 100%;}
 }
 
