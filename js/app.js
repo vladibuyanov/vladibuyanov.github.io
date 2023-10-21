@@ -1,5 +1,12 @@
-function loadAndInsertContent() {
-    const filesToLoad = [headerFile, mainFile, footerFile];
+function loadAndInsertContent(lang) {
+    let filesToLoad;
+    if (lang === enLangId) {
+        filesToLoad = [headerFile_en, mainFile_en, footerFile_en];
+    } else if (lang === ruLangId) {
+        filesToLoad = [headerFile_ru, mainFile_ru, footerFile_ru];
+    } else {
+        filesToLoad = [headerFile_sk, mainFile_sk, footerFile_sk];
+    };
     const containers = [headerContainer, mainContainer, footerContainer];
 
     filesToLoad.forEach((file, index) => {
@@ -12,22 +19,48 @@ function loadAndInsertContent() {
                 console.error("Ошибка при загрузке контента: " + error);
             });
     });
-}
+};
 
-const headerContainer = document.getElementById("header");
+const headerContainer = document.getElementById("header-content");
 const mainContainer = document.getElementById("main");
 const footerContainer = document.getElementById("footer");
 
-const headerFile = "./en/header.html"
-const mainFile = "./en/main.html"
-const footerFile = "./en/footer.html"
+const headerFile_en = "./html/en/header.html";
+const mainFile_en = "./html/en/main.html";
+const footerFile_en = "./html/en/footer.html";
 
+const headerFile_ru = "./html/ru/header.html";
+const mainFile_ru = "./html/ru/main.html";
+const footerFile_ru = "./html/ru/footer.html";
 
-loadAndInsertContent();
+const headerFile_sk = "./html/sk/header.html";
+const mainFile_sk = "./html/sk/main.html";
+const footerFile_sk = "./html/sk/footer.html";
+
+let enLangId = 'lang-en';
+let ruLangId = 'lang-ru';
+let skLangId = 'lang-sk';
+
+loadAndInsertContent(enLangId);
 addEventListener('load', function () {
+    let langs_buttons = document.getElementsByClassName('lang-button');
+    for (let i = 0; i < langs_buttons.length; i++) {
+        langs_buttons[i].addEventListener('click', setLang);
+    };
+
     let theme_btn = document.getElementById('theme');
     theme_btn.addEventListener("change", setTheme);
 
+    function setLang() {
+        let langId = this.id;
+        if (langId === enLangId) {
+            loadAndInsertContent(enLangId);
+        } else if (langId === ruLangId) {
+            loadAndInsertContent(ruLangId);
+        } else {
+            loadAndInsertContent(skLangId);
+        }
+    }
     function setTheme() {
         let body = document.querySelector("body");
         let car_btn = document.getElementsByClassName('btn');

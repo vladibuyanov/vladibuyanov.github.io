@@ -38,6 +38,10 @@ button {
     display: flex;
     justify-content: space-evenly;
 }
+#langs button {
+    background: none;
+}
+
 .select {
     border: none;
     width: 10%;
