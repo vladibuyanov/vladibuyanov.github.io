@@ -1,28 +1,17 @@
-function loadAndInsertContent()  {
-    fetch(headerFile)
-        .then(response => response.text())
-        .then(data => {
-            headerContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Ошибка при загрузке контента: " + error);
-        });
-    fetch(mainFile)
-        .then(response => response.text())
-        .then(data => {
-            mainContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Ошибка при загрузке контента: " + error);
-        });
-    fetch(footerFile)
-        .then(response => response.text())
-        .then(data => {
-            footerContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Ошибка при загрузке контента: " + error);
-        });
+function loadAndInsertContent() {
+    const filesToLoad = [headerFile, mainFile, footerFile];
+    const containers = [headerContainer, mainContainer, footerContainer];
+
+    filesToLoad.forEach((file, index) => {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => {
+                containers[index].innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Ошибка при загрузке контента: " + error);
+            });
+    });
 }
 
 const headerContainer = document.getElementById("header");
@@ -32,7 +21,6 @@ const footerContainer = document.getElementById("footer");
 const headerFile = "./en/header.html"
 const mainFile = "./en/main.html"
 const footerFile = "./en/footer.html"
-
 
 
 loadAndInsertContent();
