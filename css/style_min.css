@@ -17,11 +17,15 @@
 
     .title {margin: 5% 0;}
 
-    .skill-title {flex-direction: row;}
-    .skill-title img {width: 20%;}
+    .skill-title {
+        flex-direction: row;
+        & .skill-title img {width: 20%;
+    }
 
-    .in_title {list-style: none;}
-    .in_title h4 {font-size: 25px;}
+    .in_title {
+        list-style: none;
+        & h4 {font-size: 25px;}
+    }
 
     .carousel {height: 200px;}
     .carousel-inner {height: 80%;}

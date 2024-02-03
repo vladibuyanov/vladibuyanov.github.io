@@ -1,13 +1,16 @@
-body {font-family: 'Ubuntu', sans-serif;}
-
 /* Colors */
-.main-color {color: white;}
-.second-color {color: black;}
+:root {
+  --main-color: white;
+  --second-color: black;
+  --background-color: rgb(0 0 0 / 13%);
+}
+
 
 /* Main */
-a {
-    text-decoration: none;
-}
+body {font-family: 'Ubuntu', sans-serif;}
+.main-color {color: var(--main-color);}
+.second-color {color: var(--second-color);}
+a {text-decoration: none;}
 .btn {font-size: x-large;}
 button {
     border: none;
@@ -25,32 +28,66 @@ button {
     justify-content: space-between;
     align-items: stretch;
     flex-direction: column;
+
+    & .header-settings {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    & #header-title {
+        font-size: 40px;
+        & h1 {margin-top: 5%;}
+    }
+    & #header-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & #header-social-media {
+            width: 50%;
+            margin: 3% 1%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        & #resume {
+            padding: 2%;
+            width: 25%;
+            background-color: var(--background-color);
+            text-align: center;
+        }
+        & #resume:hover {
+            background-color: gray;
+            color: var(--main-color);
+        }
+    }
 }
-.header h1 {margin-top: 5%;}
-.header-settings {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
+
 #langs {
     width: 10%;
-    background: rgb(0 0 0 / 13%);
+    background: var(--background-color);
     display: flex;
     justify-content: space-evenly;
-}
-#langs button {
-    background: none;
+
+    &  button {
+        background: none;
+    }
+    & button:hover {
+        background: gray;
+    }
 }
 
 .select {
     border: none;
     width: 10%;
     text-align: center;
-    background: rgb(0 0 0 / 13%);
+    background: var(--background-color);
     color: white;
 }
-#header-title {font-size: 40px;}
-#header-links {display: flex; align-items: center; justify-content: space-between;}
+
+
 .social-media {
     display: flex;
     flex-direction: row;
@@ -61,28 +98,21 @@ button {
     width: 30px;
     height: 30px;
 }
-#header-social-media {
-    width: 50%;
-    margin: 3% 1%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-#resume {
-    padding: 2%;
-    width: 25%;
-    background-color: rgb(0 0 0 / 13%);
-    text-align: center;
-}
-#resume:hover {background-color: white; color: black;}
+
+
 
 /* Main */
 .main {margin: 3% 5%;}
 
 .section {margin-bottom: 2%;}
-.title {display: flex; align-items: center;}
-.title h1 {margin: 0;}
-.title img {width: 10%;}
+.title {
+    display: flex;
+    align-items: center;
+
+    & h1 {margin: 0;}
+    & img {width: 10%;}
+}
+
 .content {padding: 0 3%;}
 
 #about-me {margin-bottom: 2%;}
@@ -102,17 +132,19 @@ button {
     flex-direction: column;
     align-items: center;
     margin-bottom: 5%;
+
+    & img {width: 50%;}
+    & h4 {margin-bottom: 5%;}
 }
-.skill-title img {width: 50%;}
-.skill-title h4 {margin-bottom: 5%;}
 
 .carousel {
     display: flex;
     align-items: center;
     padding:  2% 5%;
 }
-.in_title h4 {margin-bottom: 2%; font-size: 30px;}
-
+.in_title {
+    & h4 {margin-bottom: 2%; font-size: 30px;}
+}
 
 /* Footer */
 .footer {
@@ -126,7 +158,8 @@ button {
 .address {
     display: flex;
     flex-direction: column;
+
+    a {margin-bottom: 2%;}
 }
-address a {margin-bottom: 2%;}
 #social-media {width: 20%; display: flex; justify-content: space-evenly;}
 
