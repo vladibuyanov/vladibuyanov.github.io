@@ -10,7 +10,10 @@
 body {font-family: 'Ubuntu', sans-serif;}
 .main-color {color: var(--main-color);}
 .second-color {color: var(--second-color);}
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+    color: var(--second-color);
+}
 .btn {font-size: x-large;}
 button {
     border: none;
@@ -78,7 +81,6 @@ button {
         background: gray;
     }
 }
-
 .select {
     border: none;
     width: 10%;
@@ -86,7 +88,6 @@ button {
     background: var(--background-color);
     color: white;
 }
-
 
 .social-media {
     display: flex;
@@ -100,10 +101,8 @@ button {
 }
 
 
-
 /* Main */
 .main {margin: 3% 5%;}
-
 .section {margin-bottom: 2%;}
 .title {
     display: flex;
@@ -112,15 +111,28 @@ button {
     & h1 {margin: 0;}
     & img {width: 10%;}
 }
-
 .content {padding: 0 3%;}
 
+/* Sections */
 #about-me {margin-bottom: 2%;}
+#work-experience {
+    & .work-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2%;
 
+        & p {
+            margin: unset;
+        }
+    }
+
+}
 #skills-content {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    padding: 0 3%;
 }
 .skill {
     margin: 2%;
