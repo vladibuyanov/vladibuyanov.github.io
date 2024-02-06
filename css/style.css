@@ -7,7 +7,7 @@
 
 
 /* Main */
-body {font-family: 'Ubuntu', sans-serif;}
+body {font-family: 'Ubuntu', sans-serif; margin: unset;}
 .main-color {color: var(--main-color);}
 .second-color {color: var(--second-color);}
 a {
@@ -149,14 +149,24 @@ button {
     & h4 {margin-bottom: 5%;}
 }
 
-.carousel {
-    display: flex;
-    align-items: center;
-    padding:  2% 5%;
+/* PET Projects */
+#pet-projects {
+    width: 100%;
+    & .carousel {
+        display: flex;
+        align-items: center;
+        padding:  2% 5%;
+        overflow: hidden;
+
+        & .carousel_item {
+            flex: 0 0 100%;
+            text-align: left;
+            padding-right: 10%;
+            transition: transform 3s;
+        }
+    }
 }
-.in_title {
-    & h4 {margin-bottom: 2%; font-size: 30px;}
-}
+
 
 /* Footer */
 .footer {

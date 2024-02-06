@@ -1,25 +1,38 @@
+// Функция для загрузки и вставки контента
 function loadAndInsertContent(lang) {
-    let filesToLoad;
-    if (lang === enLangId) {
-        filesToLoad = [headerFile_en, mainFile_en, footerFile_en];
-    } else if (lang === ruLangId) {
-        filesToLoad = [headerFile_ru, mainFile_ru, footerFile_ru];
-    } else {
-        filesToLoad = [headerFile_sk, mainFile_sk, footerFile_sk];
-    };
-    const containers = [headerContainer, mainContainer, footerContainer];
+    return new Promise((resolve, reject) => {
+        let filesToLoad;
+        if (lang === enLangId) {
+            filesToLoad = [headerFile_en, mainFile_en, footerFile_en];
+        } else if (lang === ruLangId) {
+            filesToLoad = [headerFile_ru, mainFile_ru, footerFile_ru];
+        } else {
+            filesToLoad = [headerFile_sk, mainFile_sk, footerFile_sk];
+        }
+        const containers = [headerContainer, mainContainer, footerContainer];
 
-    filesToLoad.forEach((file, index) => {
-        fetch(file)
-            .then(response => response.text())
-            .then(data => {
-                containers[index].innerHTML = data;
-            })
-            .catch(error => {
-                console.error("Ошибка при загрузке контента: " + error);
-            });
+        // Счетчик для отслеживания успешно загруженных файлов
+        let loadedFilesCount = 0;
+
+        filesToLoad.forEach((file, index) => {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    containers[index].innerHTML = data;
+                    loadedFilesCount++;
+
+                    // Проверяем, все ли файлы были успешно загружены
+                    if (loadedFilesCount === filesToLoad.length) {
+                        resolve();
+                    }
+                })
+                .catch(error => {
+                    console.error("Ошибка при загрузке контента: " + error);
+                    reject(error);
+                });
+        });
     });
-};
+}
 
 const headerContainer = document.getElementById("header-content");
 const mainContainer = document.getElementById("main");
@@ -41,7 +54,29 @@ let enLangId = 'lang-en';
 let ruLangId = 'lang-ru';
 let skLangId = 'lang-sk';
 
-loadAndInsertContent(enLangId);
+// Вызываем первую функцию и после ее завершения вызываем вторую
+loadAndInsertContent(enLangId)
+    .then(() => {
+        // Второй скрипт начинается здесь
+        let currentIndex = 0;
+        let items = document.getElementsByClassName('carousel_item');
+        let totalItems = items.length;
+
+        setInterval(() => {
+            if (currentIndex != 0 & currentIndex < totalItems) {
+                items[currentIndex - 1].style.transform = `translateX(${currentIndex * 100}%)`;
+                items[currentIndex].style.transform = `translateX(-${currentIndex * 100}%)`;
+            } else if (currentIndex == totalItems) {
+                items[currentIndex - 1].style.transform = `translateX(${currentIndex * 100}%)`;
+                currentIndex = -1
+            }
+            currentIndex = (currentIndex + 1);
+        }, 5000);
+    })
+    .catch(error => {
+        console.error("Ошибка при выполнении скриптов: " + error);
+    });
+
 addEventListener('load', function () {
     let langs_buttons = document.getElementsByClassName('lang-button');
     for (let i = 0; i < langs_buttons.length; i++) {
@@ -61,6 +96,7 @@ addEventListener('load', function () {
             loadAndInsertContent(skLangId);
         }
     }
+
     function setTheme() {
         let body = document.querySelector("body");
         let car_btn = document.getElementsByClassName('btn');
