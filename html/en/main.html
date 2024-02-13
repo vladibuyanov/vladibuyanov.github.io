@@ -1,9 +1,8 @@
 <!-- Main content -->
-
 <div id="about-me" class="section">
     <div class="title">
-        <img src="img/buttons/about-me.png" alt="" class="title-img">
-        <h1>About me</h1>
+        <img src="img/buttons/black/about-me.png" alt="" class="title-img">
+        <h2>About me</h2>
     </div>
     <div class="content">
         <p>
@@ -29,29 +28,55 @@
         <p>Please feel free to get in touch!</p>
     </div>
 </div>
+<div id="work-experience">
+    <div class="title">
+        <img src="img/buttons/black/about-me.png" alt="" class="title-img">
+        <h2>Work experience</h2>
+    </div>
+    <div class="content">
+        <div class="work">
+            <div class="work-title">
+                <a href="https://datadocksolutions.com/" class="page-links">
+                    <h3>DataDock Solutions</h3>
+                </a>
+                <p>01.04.2023 - Now</p>
+            </div>
+            <p><strong>Job Title:</strong> QA automation.</p>
+            <p>
+                <strong>Responsibilities:</strong> Conducting manual testing and developing automated tests
+                for our team's applications. I actively engage in load testing and have experience in
+                developing my own tool for conducting load testing.
+            </p>
+            <p>
+                <strong>Technologies Used:</strong> Python, Selenium, Locust, Docker, Databases,
+                Command Line, Git, TestRail.
+            </p>
+        </div>
+    </div>
+</div>
 <div id="skills" class="section">
     <div class="title">
-        <img src="img/buttons/skills.png" alt="" class="title-img">
-        <h1>My skills</h1>
+        <img src="img/buttons/black/skills.png" alt="" class="title-img">
+        <h2>My skills</h2>
     </div>
     <div id="skills-content">
         <div class="skill">
             <div class="skill-title">
-                <img src="img/buttons/ts.png" alt="" class="title-img">
+                <img src="img/buttons/black/ts.png" alt="" class="title-img">
                 <h4 class="title">Technical skills</h4>
             </div>
             <ul class="in_title">
-                <li><p>Web-Development: Django, Django REST framework, Flask</p></li>
-                <li><p>Frontend: HTML, CSS</p></li>
-                <li><p>Data: PostgreSQL, SQLite</p></li>
-                <li><p>QA: PyTest, Selenium, Locust</p></li>
-                <li><p>Infrastructure: Docker</p></li>
-                <li><p>Processes: GitHub</p></li>
+                <li><p><strong>Web-Development:</strong> Django, Django REST framework, Flask</p></li>
+                <li><p><strong>Frontend:</strong> HTML, CSS</p></li>
+                <li><p><strong>Data:</strong> PostgreSQL, SQLite</p></li>
+                <li><p><strong>QA:</strong> PyTest, Selenium, Locust</p></li>
+                <li><p><strong>Infrastructure:</strong> Docker</p></li>
+                <li><p><strong>Processes:</strong> GitHub</p></li>
             </ul>
         </div>
         <div id='soft-skill' class="skill">
             <div class="skill-title">
-                <img src="img/buttons/ss.png" alt="" class="title-img">
+                <img src="img/buttons/black/ss.png" alt="" class="title-img">
                 <h4 class="title">Soft-Skills</h4>
             </div>
             <ul class="in_title">
@@ -62,7 +87,7 @@
         </div>
         <div class="skill">
             <div class="skill-title">
-                <img src="img/buttons/lang.png" alt="" class="title-img">
+                <img src="img/buttons/black/lang.png" alt="" class="title-img">
                 <h4 class="title">Languages</h4>
             </div>
             <ul class="in_title">
@@ -75,54 +100,49 @@
 </div>
 <div id="pet-projects">
     <div class="title">
-        <img src="img/buttons/pp.png" alt="" class="title-img">
-        <h1>Pet Projects</h1>
+        <img src="img/buttons/black/pp.png" alt="" class="title-img">
+        <h2>Pet Projects</h2>
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="in_title">
-                    <a href="https://obecnemusembrhlovce.up.railway.app/" class="second-color">
-                        <h4>Brhlovce Municipal Museum</h4>
-                    </a>
-                    <div class="title-main">
-                        <div>
-                            <h5>Local museum website</h5>
-                            <p>Tech: Python, Django</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="in_title">
-                    <a href="https://small-lib.up.railway.app" class="second-color">
-                        <h4>Small Lib</h4>
-                    </a>
-                    <div class="title-main">
-                        <div>
-                            <h5>Web service for exchanging books</h5>
-                            <p>Tech: Python, Flask, Flask-Sqlalchemy</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="in_title">
-                    <a href="t.me/korona_sk_bot" class="second-color">
-                        <h4>Korona bot</h4>
-                    </a>
-                    <h5>A simple telegram bot</h5>
-                    <p>Tech: Telebot</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="in_title">
-                    <h4 class="second-color">Fabrique</h4>
-                    <h5>Mail management service, API management and statistics</h5>
-                    <p>Tech: Django, Django rest framework</p>
-                </div>
+    <div class="carousel">
+        <div class="carousel_item"></div>
+        <div class="carousel_item">
+            <a href="https://obecnemusembrhlovce.up.railway.app/" class="page-links">
+                <h4>Brhlovce Municipal Museum</h4>
+            </a>
+            <div>
+                <p>Local museum website</p>
+                <p><strong>Tech:</strong> Python, Django</p>
             </div>
         </div>
-        <button class='btn' data-bs-target="#carouselExampleControls" data-bs-slide="next">></button>
+        <div class="carousel_item">
+            <a href="https://small-lib.up.railway.app" class="page-links">
+                <h4>Small Lib</h4>
+            </a>
+            <div>
+                <p>Web service for exchanging books</p>
+                <p><strong>Tech:</strong> Python, Flask, Flask-Sqlalchemy</p>
+            </div>
+        </div>
+        <div class="carousel_item">
+            <a href="https://___.up.railway.app/" class="page-links">
+                <h4>Terra Aurum webpage</h4>
+            </a>
+            <div>
+                <p>Web-page for "Terra Aurum"</p>
+                <p><strong>Tech:</strong> Python, Django</p>
+            </div>
+        </div>
+        <div class="carousel_item">
+            <a href="https://___.up.railway.app/" class="page-links">
+                <h4>AGRI bot</h4>
+            </a>
+            <div>
+                <p>
+                    Telegram bot providing data on prices for wheat, corn and rapeseed from Central European Commission.
+                    Central European Commission API
+                </p>
+                <p><strong>Tech:</strong> Python, Telebot</p>
+            </div>
+        </div>
     </div>
 </div>

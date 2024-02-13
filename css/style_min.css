@@ -1,22 +1,58 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
+   .header {
+        & .header-settings{
+            & #langs {
+                width: 25%;
+            }
+            & .select {
+                width: 25%;
+            }
+        }
+        & #header-links {
+            flex-direction: column;
+            & #header-social-media {
+                width: 100%;
+                justify-content: space-around;
+                margin-bottom: 5%;
+                & .social-media-link {margin-right: 0;}
+            }
+            & #resume {width: 90%;}
+        }
+   }
+
    #header-title {text-align: center;}
-   #header-links {flex-direction: column;}
-   #header-social-media {width: 100%; justify-content: space-around;}
-   .social-media-link {margin-right: 0;}
-   #resume {width: 100%;}
 
    #skills-content {grid-template-columns: 1fr;}
-   .skill {padding: 5%; width: 100%;}
+   .skill {padding: 5%;}
+   .skill-title{
+       display: flex;
+       flex-direction: row;
+       margin-bottom: unset;
+   }
 }
 
 @media screen and (max-width: 425px) {
-    #langs {width: 30%;}
-    .select {width: 30%;}
-    #header h1 {margin-top: 10%;}
+    #header {
+        & .header-settings {
+            & #langs {
+                width: 30%;
+            }
+            & .select {
+                width: 30%;
+            }
+        }
+        & #header-title {
+            & h1 {
+                font-size: 35px;
+            }
+            & h2 {
+                font-size: 30px;
+            }
+        }
+    }
+
     #header-social-media {margin: 5% 1%;}
-
     .title {margin: 5% 0;}
-
     .skill-title {
         flex-direction: row;
         & .skill-title img {width: 20%;
@@ -33,5 +69,15 @@
     .footer {flex-direction: column-reverse;}
     .address {align-items: center;}
     #social-media {width: 100%; margin: 3%; justify-content: space-around;}
-
 }
+
+    .footer {
+        flex-direction: column-reverse;
+        .address {
+            align-items: center;
+            margin: 5% 0;
+        }
+        #social-media {
+            width: 100%;
+        }
+    }
