@@ -1,31 +1,46 @@
 /* Constants */
 const headerFile_en = "./html/en/header.html";
 const mainFile_en = "./html/en/main.html";
-const footerFile_en = "./html/en/footer.html";
 
 const headerFile_ru = "./html/ru/header.html";
 const mainFile_ru = "./html/ru/main.html";
-const footerFile_ru = "./html/ru/footer.html";
 
 const headerFile_sk = "./html/sk/header.html";
 const mainFile_sk = "./html/sk/main.html";
-const footerFile_sk = "./html/sk/footer.html";
+
+const footerFile = "./html/footer.html";
 
 let enLangId = 'lang-en';
 let ruLangId = 'lang-ru';
 let skLangId = 'lang-sk';
 
 let langFiles = {
-    'lang-en': [headerFile_en, mainFile_en, footerFile_en],
-    'lang-ru': [headerFile_ru, mainFile_ru, footerFile_ru],
-    'lang-sk': [headerFile_sk, mainFile_sk, footerFile_sk]
+    'lang-en': [headerFile_en, mainFile_en, footerFile],
+    'lang-ru': [headerFile_ru, mainFile_ru, footerFile],
+    'lang-sk': [headerFile_sk, mainFile_sk, footerFile]
 };
 
-/**/
+/* Simple function */
 function set_color(elements, color) {
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.color = color;
     }
+}
+
+function updateIconColors(color) {
+    let imgLinks = document.querySelectorAll(".footer-img");
+    let imgTitle = document.querySelectorAll(".title-img");
+
+    imgLinks.forEach(function(link) {
+        const fileName = link.getAttribute("src").split("/").pop();
+        const newSrc = `img/social-links/${color}/${fileName}`;
+        link.setAttribute("src", newSrc);
+    });
+    imgTitle.forEach(function(link) {
+        const fileName = link.getAttribute("src").split("/").pop();
+        const newSrc = `img/buttons/${color}/${fileName}`;
+        link.setAttribute("src", newSrc);
+    });
 }
 
 /* Functions */
@@ -44,11 +59,9 @@ function loadAndInsertContent(lang) {
 
                     let theme_btn = document.getElementById('theme');
                     if (theme_btn.value == 'dark') {
-                        let imgLinks = document.querySelectorAll(".footer-img");
-                        let imgTitle = document.querySelectorAll(".title-img");
-                        let page_links = document.getElementsByClassName('page-links');
-
                         updateIconColors('white');
+
+                        let page_links = document.getElementsByClassName('page-links');
                         set_color(page_links, 'white');
                     };
 
@@ -61,24 +74,6 @@ function loadAndInsertContent(lang) {
                     reject(error);
                 });
         });
-
-
-    });
-}
-
-function updateIconColors(color) {
-    let imgLinks = document.querySelectorAll(".footer-img");
-    let imgTitle = document.querySelectorAll(".title-img");
-
-    imgLinks.forEach(function(link) {
-        const fileName = link.getAttribute("src").split("/").pop();
-        const newSrc = `img/social-links/${color}/${fileName}`;
-        link.setAttribute("src", newSrc);
-    });
-    imgTitle.forEach(function(link) {
-        const fileName = link.getAttribute("src").split("/").pop();
-        const newSrc = `img/buttons/${color}/${fileName}`;
-        link.setAttribute("src", newSrc);
     });
 }
 
@@ -101,7 +96,7 @@ loadAndInsertContent(enLangId)
                 currentIndex = -1
             }
             currentIndex = (currentIndex + 1);
-        }, 5000);
+        }, 4000);
     })
     .catch(error => {
         console.error("Ошибка при выполнении скриптов: " + error);
@@ -134,18 +129,7 @@ addEventListener('load', function () {
             set_color(second_color, 'black');
             set_color(page_links, 'black');
 
-            let imgLinks = document.querySelectorAll(".footer-img");
-            let imgTitle = document.querySelectorAll(".title-img");
-            imgLinks.forEach(function(link) {
-                const fileName = link.getAttribute("src").split("/").pop();
-                const newSrc = `img/social-links/${fileName}`;
-                link.setAttribute("src", newSrc);
-            });
-            imgTitle.forEach(function(link) {
-                const fileName = link.getAttribute("src").split("/").pop();
-                const newSrc = `img/buttons/${fileName}`;
-                link.setAttribute("src", newSrc);
-            });
+            updateIconColors('black');
 
         } else {
             body.style.background = 'black';
