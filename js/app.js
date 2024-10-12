@@ -88,15 +88,18 @@ loadAndInsertContent(enLangId)
         let totalItems = items.length;
 
         setInterval(() => {
+            if (currentIndex == 0) {
+                items[currentIndex].style.transform = `translateX(0)`;
+            }
             if (currentIndex != 0 & currentIndex < totalItems) {
-                items[currentIndex - 1].style.transform = `translateX(${currentIndex * 100}%)`;
-                items[currentIndex].style.transform = `translateX(-${currentIndex * 100}%)`;
+                items[currentIndex - 1].style.transform = `translateX(100%)`;
+                items[currentIndex].style.transform = `translateX(0)`;
             } else if (currentIndex == totalItems) {
-                items[currentIndex - 1].style.transform = `translateX(${currentIndex * 100}%)`;
+                items[currentIndex - 1].style.transform = `translateX(100%)`;
                 currentIndex = -1
             }
             currentIndex = (currentIndex + 1);
-        }, 4000);
+        }, 8000);
     })
     .catch(error => {
         console.error("Ошибка при выполнении скриптов: " + error);

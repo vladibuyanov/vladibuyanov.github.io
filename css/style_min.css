@@ -19,7 +19,6 @@
             & #resume {width: 90%;}
         }
    }
-
    #header-title {text-align: center;}
 
    #skills-content {grid-template-columns: 1fr;}
@@ -28,17 +27,17 @@
        display: flex;
        flex-direction: row;
        margin-bottom: unset;
+       & img {
+           width: 50%;
+       }
    }
 }
 
 @media screen and (max-width: 425px) {
     #header {
         & .header-settings {
-            & #langs {
-                width: 30%;
-            }
-            & .select {
-                width: 30%;
+            & .top-buttons {
+                width: 35%;
             }
         }
         & #header-title {
@@ -50,12 +49,23 @@
             }
         }
     }
-
     #header-social-media {margin: 5% 1%;}
+    .footer {
+        flex-direction: column-reverse;
+        .address {
+            align-items: center;
+            margin: 5% 0;
+        }
+        #social-media {
+            width: 100%;
+        }
+    }
+
     .title {margin: 5% 0;}
     .skill-title {
         flex-direction: row;
-        & .skill-title img {width: 20%;
+        & img {display: none;}
+        & h4 {margin: 3%;}
     }
 
     .in_title {
@@ -70,14 +80,3 @@
     .address {align-items: center;}
     #social-media {width: 100%; margin: 3%; justify-content: space-around;}
 }
-
-    .footer {
-        flex-direction: column-reverse;
-        .address {
-            align-items: center;
-            margin: 5% 0;
-        }
-        #social-media {
-            width: 100%;
-        }
-    }
