@@ -8,17 +8,19 @@ const mainFile_ru = "./html/ru/main.html";
 const headerFile_sk = "./html/sk/header.html";
 const mainFile_sk = "./html/sk/main.html";
 
-const footerFile = "./html/footer.html";
-
 let enLangId = 'lang-en';
 let ruLangId = 'lang-ru';
 let skLangId = 'lang-sk';
 
 let langFiles = {
-    'lang-en': [headerFile_en, mainFile_en, footerFile],
-    'lang-ru': [headerFile_ru, mainFile_ru, footerFile],
-    'lang-sk': [headerFile_sk, mainFile_sk, footerFile]
+    'lang-en': [headerFile_en, mainFile_en],
+    'lang-ru': [headerFile_ru, mainFile_ru],
+    'lang-sk': [headerFile_sk, mainFile_sk]
 };
+
+const headerContainer = document.getElementById("header-content");
+const mainContainer = document.getElementById("main");
+
 
 /* Simple function */
 function set_color(elements, color) {
@@ -47,7 +49,7 @@ function updateIconColors(color) {
 function loadAndInsertContent(lang) {
     return new Promise((resolve, reject) => {
         filesToLoad = langFiles[lang];
-        const containers = [headerContainer, mainContainer, footerContainer];
+        const containers = [headerContainer, mainContainer];
         let loadedFilesCount = 0;
 
         filesToLoad.forEach((file, index) => {
@@ -77,30 +79,8 @@ function loadAndInsertContent(lang) {
     });
 }
 
-const headerContainer = document.getElementById("header-content");
-const mainContainer = document.getElementById("main");
-const footerContainer = document.getElementById("footer");
-
 loadAndInsertContent(enLangId)
-    .then(() => {
-        let currentIndex = 0;
-        let items = document.getElementsByClassName('carousel_item');
-        let totalItems = items.length;
-
-        setInterval(() => {
-            if (currentIndex == 0) {
-                items[currentIndex].style.transform = `translateX(0)`;
-            }
-            if (currentIndex != 0 & currentIndex < totalItems) {
-                items[currentIndex - 1].style.transform = `translateX(100%)`;
-                items[currentIndex].style.transform = `translateX(0)`;
-            } else if (currentIndex == totalItems) {
-                items[currentIndex - 1].style.transform = `translateX(100%)`;
-                currentIndex = -1
-            }
-            currentIndex = (currentIndex + 1);
-        }, 8000);
-    })
+    .then(() => {})
     .catch(error => {
         console.error("Ошибка при выполнении скриптов: " + error);
     });
