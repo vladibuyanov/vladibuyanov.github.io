@@ -18,25 +18,204 @@
     <link rel="stylesheet" href='css/style.css'>
     <link rel="stylesheet" href='css/style_min.css'>
     <!-- JS -->
-    <script src="/js/app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyglot.js/0.4.2/polyglot.js"
+            integrity="sha512-QFTPqHp4az4QFfl686cvtlT/5KqzUF/WTAggfjMSGz3U5DG3v9PxDsmXjnipIksPpgUPsZJxVvmA9UtjLR+hjw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+    </script>
+    <script src="/js/set_lang.js" defer></script>
+    <script src="/js/set_theme.js" defer></script>
     <script src="/js/carousel.js" defer></script>
 </head>
 <body>
 <header class="header" id="header">
     <div class="header-settings">
         <div id="langs" class="top-buttons">
-            <button id='lang-en' class="main-color lang-button">EN</button>
-            <button id='lang-ru' class="main-color lang-button">RU</button>
-            <button id='lang-sk' class="main-color lang-button">SK</button>
+            <button id='lang-en' class="main-color lang-button" data-lang="en">EN</button>
+            <button id='lang-ru' class="main-color lang-button" data-lang="ru">RU</button>
+            <button id='lang-sk' class="main-color lang-button" data-lang="sk">SK</button>
         </div>
         <select class="select top-buttons" id="theme">
             <option value="light">Light</option>
             <option value="dark">Dark</option>
         </select>
     </div>
-    <div id="header-content"></div>
+    <div id="header-content">
+        <div id="header-title" class="main-color">
+            <h1 data-i18n="header.name">Vladislav Buyanov</h1>
+            <h2 data-i18n="header.profession">Python Developer</h2>
+        </div>
+        <div id="header-links">
+            <div id="header-social-media">
+                <a href="https://www.linkedin.com/in/vladibuyanov/" class="social-media-link">
+                    <img class="img-link" src='img/social-links/white/link.svg'>
+                </a>
+                <a href="https://t.me/Vladislav_Buyanov" class="social-media-link">
+                    <img class="img-link" src='img/social-links/white/tel.svg'>
+                </a>
+                <a href="https://github.com/vladibuyanov" class="social-media-link">
+                    <img class="img-link" src='img/social-links/white/git.svg'>
+                </a>
+            </div>
+            <a href="/documents/Python-Developer.pdf" id="resume" class="main-color" data-i18n="resume.download">
+                Download Resume
+            </a>
+        </div>
+    </div>
 </header>
-<main class="main" id="main"></main>
+<main class="main" id="main">
+    <div id="about-me" class="section">
+        <div class="title">
+            <img src="img/buttons/black/about-me.png" alt="" class="title-img">
+            <h2 data-i18n="about_me.title">About me</h2>
+        </div>
+        <div class="content">
+            <p data-i18n="about_me.p1">
+                My name is Vladislav. I am a QA automation engineer.
+                My goal is to continuously improve myself and become a backend developer.
+            </p>
+            <p data-i18n="about_me.p2">
+                In the world of development, I find inspiration in creating complex logical
+                structures and working with databases. My passion is to build technological
+                solutions that make the world more efficient and convenient.
+            </p>
+            <p data-i18n="about_me.p3">
+                In my free time, I do sports, read, and watch TV shows.
+                I believe that regular breaks and variety in life not only
+                help to maintain balance but also make me more productive
+                at work.
+            </p>
+            <p data-i18n="about_me.p4">
+                I am always open to new connections and happy to discuss
+                opportunities for collaboration in backend development or
+                programming in general.
+            </p>
+            <p data-i18n="about_me.p5">Please feel free to get in touch!</p>
+        </div>
+    </div>
+    <div id="work-experience" class="section">
+        <div class="title">
+            <img src="img/buttons/black/about-me.png" alt="" class="title-img">
+            <h2 data-i18n="work_experience.title">Work experience</h2>
+        </div>
+        <div class="content">
+            <div class="work">
+                <div class="work-title">
+                    <a href="https://datadocksolutions.com/" class="page-links">
+                        <h3>DataDock Solutions</h3>
+                    </a>
+                    <p data-i18n="work_experience.period">01.04.2023 - Now</p>
+                </div>
+                <p><strong data-i18n="work_experience.job_title_label">Job Title:</strong> <span
+                        data-i18n="work_experience.job_title">QA automation.</span></p>
+                <p>
+                    <strong data-i18n="work_experience.responsibilities_label">Responsibilities:</strong>
+                    <span data-i18n="work_experience.responsibilities">
+                        Conducting manual testing and developing automated tests
+                        for our team's applications. I actively engage in load testing and have experience in
+                        developing my own tool for conducting load testing.
+                    </span>
+                </p>
+                <p>
+                    <strong data-i18n="work_experience.technologies_label">Technologies Used:</strong>
+                    <span data-i18n="work_experience.technologies">Python, Selenium, Locust, Docker, Databases, Command Line, Git, TestRail.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="skills" class="section">
+        <div class="title">
+            <img src="img/buttons/black/skills.png" alt="" class="title-img">
+            <h2 data-i18n="skills.title">My skills</h2>
+        </div>
+        <div id="skills-content">
+            <div class="skill">
+                <div class="skill-title">
+                    <img src="img/buttons/black/ts.png" alt="" class="title-img">
+                    <h4 class="title" data-i18n="skills.technical">Technical skills</h4>
+                </div>
+                <ul class="in_title">
+                    <li><p><strong data-i18n="skills.web">Web-Development:</strong> Django, Django REST framework, Flask
+                    </p></li>
+                    <li><p><strong data-i18n="skills.frontend">Frontend:</strong> JS, HTML, CSS</p></li>
+                    <li><p><strong data-i18n="skills.data">Data:</strong> PostgreSQL, SQLite</p></li>
+                    <li><p><strong data-i18n="skills.qa">QA:</strong> PyTest, Selenium, Locust</p></li>
+                    <li><p><strong data-i18n="skills.infrastructure">Infrastructure:</strong> Docker</p></li>
+                    <li><p><strong data-i18n="skills.processes">Processes:</strong> GitHub</p></li>
+                </ul>
+            </div>
+            <div id='soft-skill' class="skill">
+                <div class="skill-title">
+                    <img src="img/buttons/black/ss.png" alt="" class="title-img">
+                    <h4 class="title" data-i18n="skills.soft">Soft-Skills</h4>
+                </div>
+                <ul class="in_title">
+                    <li><p data-i18n="skills.soft.learning">Like to learn new things</p></li>
+                    <li><p data-i18n="skills.soft.teamwork">Team player</p></li>
+                    <li><p data-i18n="skills.soft.flexible">Flexible</p></li>
+                </ul>
+            </div>
+            <div class="skill">
+                <div class="skill-title">
+                    <img src="img/buttons/black/lang.png" alt="" class="title-img">
+                    <h4 class="title" data-i18n="skills.languages">Languages</h4>
+                </div>
+                <ul class="in_title">
+                    <li><p data-i18n="skills.lang.english">English language - B2</p></li>
+                    <li><p data-i18n="skills.lang.slovak">Slovak language - B2</p></li>
+                    <li><p data-i18n="skills.lang.russian">Russian language - Native</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="pet-projects" class="section">
+        <div class="title">
+            <img src="img/buttons/black/pp.png" alt="" class="title-img">
+            <h2 data-i18n="projects.title">Pet Projects</h2>
+        </div>
+        <div class="carousel-inner slider">
+            <div class="carousel_item slide">
+                <a href="https://www.haja.sk/" class="page-links">
+                    <h4 data-i18n="projects.haja.title">Haja S.R.O. webpage</h4>
+                </a>
+                <div>
+                    <p data-i18n="projects.haja.desc">Web-page for "Haja S.R.O."</p>
+                    <p><strong data-i18n="projects.tech">Tech:</strong> Python, Flask</p>
+                </div>
+            </div>
+            <div class="carousel_item slide">
+                <a href="https://obecnemusembrhlovce.up.railway.app/" class="page-links">
+                    <h4 data-i18n="projects.museum.title">Brhlovce Municipal Museum</h4>
+                </a>
+                <div>
+                    <p data-i18n="projects.museum.desc">Local museum website</p>
+                    <p><strong data-i18n="projects.tech">Tech:</strong> Python, Django</p>
+                </div>
+            </div>
+            <div class="carousel_item slide">
+                <a href="https://small-lib.up.railway.app" class="page-links">
+                    <h4 data-i18n="projects.lib.title">Small Lib</h4>
+                </a>
+                <div>
+                    <p data-i18n="projects.lib.desc">Web service for exchanging books</p>
+                    <p><strong data-i18n="projects.tech">Tech:</strong> Python, Flask, Flask-Sqlalchemy</p>
+                </div>
+            </div>
+            <div class="carousel_item slide">
+                <a href="https://___.up.railway.app/" class="page-links">
+                    <h4 data-i18n="projects.agri.title">AGRI bot</h4>
+                </a>
+                <div>
+                    <p data-i18n="projects.agri.desc">
+                        Telegram bot providing data on prices for wheat, corn and rapeseed from Central European
+                        Commission.
+                    </p>
+                    <p><strong data-i18n="projects.tech">Tech:</strong> Python, Telebot</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 <footer class="footer" id="footer">
     <div class="address">
         <a href="mailto:vladibuyanov@gmail.com" class="second-color">vladibuyanov@gmail.com</a>
@@ -52,7 +231,7 @@
         <a href="https://github.com/vladibuyanov">
             <img class="img-link footer-img" src='img/social-links/black/git.svg'>
         </a>
-</div>
+    </div>
 </footer>
 </body>
 </html>
